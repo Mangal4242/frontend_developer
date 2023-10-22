@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #eaeaea;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('background.jpg') center center;
+    background-size: cover;
+    /* filter: blur(10px); */
+    z-index: -1;
+}
+
+.container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s;
+    z-index: 1;
+}
+
+.container:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.editor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #2980b9;
+}
+
+.code-display {
+    background: #3f3f3f;
+    color: #fffcfc; 
+    border-radius: 5px;
+    padding: 10px;
+    font-family: Consolas, monospace;
+    white-space: pre-wrap;
+    line-height: 1.5;
+    overflow-x: auto;
+    tab-size: 4;
+}
+
+.code-display code {
+    display: block;
+    padding-left: 10px;
+}
+
+
+.locked {
+    pointer-events: none;
+    background-color: #ccc;
+    color: #777;
+}
+
+.unlocked {
+    pointer-events: auto;
+}
+
+.notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 1.2rem;
+    display: none;
+    transition: opacity 0.3s;
+}
+
+.notification p {
+    padding: 20px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.output-container {
+    display: none;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s;
+}
+
+.output-container h2 {
+    font-size: 1.5rem;
+    margin: 0 0 10px;
+}
+
+.output {
+    background: #f0f0f0;
+    color: #000;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: Consolas, monospace;
+    white-space: pre-wrap;
+    line-height: 1.5;
+    overflow-x: auto;
+}
+
+.output-container:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}

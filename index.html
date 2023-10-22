@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Code Editor</title>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <div class="editor-header">
+            <button class="button copy-button">Copy</button>
+            <button class="button save-button">Save</button>
+            <button class="button lock-button">Lock</button>
+            <button class="button run-button">Run</button>
+        </div>
+        <p class="code-placeholder">Write your code here</p>
+        <pre class="code-display">
+            <code id="code" contenteditable="true">
+                //Write the code
+            </code>
+        </pre>
+    </div>
+    <div class="notification">
+        <p id="message-text"></p>
+    </div>
+    <div class="output-container">
+        <h2>Code Output</h2>
+        <pre class="output" id="output"></pre>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
